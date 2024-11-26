@@ -1,0 +1,61 @@
+{{>header}}
+ <title>CRUD</title>
+ {{>navbar}}
+  <div class="mid-section container-fluid my-3">
+         <h5 class="background text-light text-center p-2">Update Employee Record</h5>
+     <form action="" method="post">
+          <div class="mb-3">
+               <label>Name*</label>
+               <input type="text" name="name" placeholder="Name" class="form-control border-3 {{#if errorMessage.name}}border-danger{{else}}border-primary{{/if}} " value="{{data.name}}" />
+          {{#if errorMessage.name}}
+          <p class="text-danger">{{errorMessage.name}}</p>
+          {{/if}}
+          </div>
+          <div class="row">
+             <div class="col-md-6">
+               <label>Email*</label>
+               <input type="email" name="email" placeholder="Email Address" class="form-control border-3 {{#if errorMessage.email}}border-danger{{else}}border-primary{{/if}} " value="{{data.email}}"/>
+               {{#if errorMessage.email}}
+               <p class="text-danger">{{errorMessage.email}}</p>
+               {{/if}}
+             </div>
+               <div class="col-md-6">
+               <label>Phone*</label>
+               <input type="text" name="phone" placeholder="Phone Number" class="form-control border-3 {{#if errorMessage.phone}}border-danger{{else}}border-primary{{/if}} " value="{{data.phone}}"/>
+               {{#if errorMessage.phone}}
+               <p class="text-danger">{{errorMessage.phone}}</p>
+               {{/if}}
+             </div>
+          </div>
+          <div class="row">
+             <div class="col-md-6">
+               <label>Designation*</label>
+               <input type="text" name="designation" placeholder="Designation" class="form-control border-3 {{#if errorMessage.designation}}border-danger{{else}}border-primary{{/if}}" value="{{data.designation}}"/>
+               {{#if errorMessage.designation}}
+               <p class="text-danger">{{errorMessage.designation}}</p>
+               {{/if}}
+             </div>
+               <div class="col-md-6">
+               <label>Salary*</label>
+               <input type="number" name="salary" placeholder="Salary" class="form-control border-3 {{#if errorMessage.salary}}border-danger{{else}}border-primary{{/if}} " value="{{data.salary}}"/>
+               {{#if errorMessage.salary}}
+               <p class="text-danger">{{errorMessage.salary}}</p>
+               {{/if}}
+             </div>
+          </div>
+            <div class="row">
+            <div class="col-md-6 mb-3">
+                <label>City</label>
+                <input type="text" name="city" placeholder="City Name" class="form-control border-3 border-primary" value="{{data.city}}" value="{{data.city}}">
+            </div>
+
+            <div class="col-md-6 mb-3">
+                <label>State</label>
+                <input type="text" name="state" placeholder="State Name" class="form-control border-3 border-primary" value="{{data.state}}" value="{{data.state}}">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary w-100 background">Update</button>
+     </form>
+  </div>
+
+{{>footer}}
